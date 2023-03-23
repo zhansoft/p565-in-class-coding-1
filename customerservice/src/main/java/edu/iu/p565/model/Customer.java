@@ -1,11 +1,16 @@
 package edu.iu.p565.model;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Objects;
 
 public class Customer {
 
     private int id;
+    @NotEmpty(message = "name cannot be empty")
     private String name;
+    @NotEmpty(message = "email cannot be empty")
     private String email;
 
     @Override
